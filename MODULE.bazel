@@ -1,0 +1,9 @@
+bazel_dep(name = "toolchains_buildbuddy")
+archive_override(
+    module_name = "toolchains_buildbuddy",
+    integrity = "sha256-VtJjefgP2Vq5S6DiGYczsupNkosybmSBGWwcLUAYz8c=",
+    strip_prefix = "buildbuddy-toolchain-66146a3015faa348391fcceea2120caa390abe03",
+    urls = ["https://github.com/buildbuddy-io/buildbuddy-toolchain/archive/66146a3015faa348391fcceea2120caa390abe03.tar.gz"],
+)
+buildbuddy = use_extension("@toolchains_buildbuddy//:extensions.bzl", "buildbuddy")
+use_repo(buildbuddy, "buildbuddy_toolchain")
