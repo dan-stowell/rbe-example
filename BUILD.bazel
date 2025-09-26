@@ -1,6 +1,13 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_python//python:py_binary.bzl", "py_binary")
 
 cc_binary(
-    name = "main",
+    name = "main_cc",
     srcs = ["main.cc"],
+)
+
+py_binary(
+  name = "main_py",
+  main = "main.py",
+  srcs = ["main.py"],
 )

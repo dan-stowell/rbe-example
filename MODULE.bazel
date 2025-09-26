@@ -8,3 +8,9 @@ archive_override(
 buildbuddy = use_extension("@toolchains_buildbuddy//:extensions.bzl", "buildbuddy")
 
 bazel_dep(name = "rules_cc", version = "0.2.8")
+
+bazel_dep(name = "rules_python", version = "1.6.3")
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    python_version = "3.13",
+)
