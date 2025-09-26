@@ -6,4 +6,3 @@ archive_override(
     urls = ["https://github.com/buildbuddy-io/buildbuddy-toolchain/archive/66146a3015faa348391fcceea2120caa390abe03.tar.gz"],
 )
 buildbuddy = use_extension("@toolchains_buildbuddy//:extensions.bzl", "buildbuddy")
-use_repo(buildbuddy, "buildbuddy_toolchain")
