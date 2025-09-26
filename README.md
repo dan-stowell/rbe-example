@@ -37,7 +37,7 @@ bazel build //:main_cc \
     --experimental_platform_in_output_dir
 ```
 
-## Build a binary remotely
+## Build a Linux x86_64 binary remotely
 ```sh
 bazel build //:main_cc \
     --bes_results_url=https://app.buildbuddy.io/invocation/ \
