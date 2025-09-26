@@ -16,6 +16,7 @@ register_toolchains(
     "@toolchains_buildbuddy//toolchains/cc:ubuntu_gcc_x86_64",
 )
 
+bazel_dep(name = "rules_cc", version = "0.2.8")
 ```
 
 ## [BUILD.bazel](BUILD.bazel)
