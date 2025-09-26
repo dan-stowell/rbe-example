@@ -1,7 +1,7 @@
 # rbe-example
 
 
-This [MODULE.bazel] snippet
+This [MODULE.bazel](MODULE.bazel) snippet
 ```python
 bazel_dep(name = "toolchains_buildbuddy")
 archive_override(
@@ -17,7 +17,7 @@ register_toolchains(
 )
 ```
 
-and [BUILD.bazel] snippet
+and [BUILD.bazel](BUILD.bazel) snippet
 ```python
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
@@ -27,7 +27,7 @@ cc_binary(
 )
 ```
 
-lets you build a binary locally with
+let you build a binary locally with
 ```sh
 bazel build //:main_cc \
     --bes_results_url=https://app.buildbuddy.io/invocation/ \
