@@ -1,8 +1,8 @@
 # rbe-example
 
 
-This [MODULE.bazel](MODULE.bazel) snippet
-```python
+## [MODULE.bazel](MODULE.bazel)
+```bazel
 bazel_dep(name = "toolchains_buildbuddy")
 archive_override(
     module_name = "toolchains_buildbuddy",
@@ -15,9 +15,10 @@ buildbuddy = use_extension("@toolchains_buildbuddy//:extensions.bzl", "buildbudd
 register_toolchains(
     "@toolchains_buildbuddy//toolchains/cc:ubuntu_gcc_x86_64",
 )
+
 ```
 
-and [BUILD.bazel](BUILD.bazel) snippet
+## [BUILD.bazel](BUILD.bazel)
 ```python
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
@@ -27,7 +28,7 @@ cc_binary(
 )
 ```
 
-let you build a binary locally with
+## Build a binary locally
 ```sh
 bazel build //:main_cc \
     --bes_results_url=https://app.buildbuddy.io/invocation/ \
@@ -35,7 +36,7 @@ bazel build //:main_cc \
     --experimental_platform_in_output_dir
 ```
 
-and then build a Linux x86_64 binary remotely with
+## Build a binary remotely
 ```sh
 bazel build //:main_cc \
     --bes_results_url=https://app.buildbuddy.io/invocation/ \
